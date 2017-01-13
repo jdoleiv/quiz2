@@ -1,0 +1,7 @@
+<h1>What is your favourite movie?</h1>
+<%= simple_form_for @movie do |f| %>
+  <%= f.input :title %>
+  <%= f.input :director %>
+  <br />
+  <%= f.submit 'Add', class: 'btn btn-danger' %>
+<% end %>

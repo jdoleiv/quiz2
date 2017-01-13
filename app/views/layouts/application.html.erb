@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quiz1</title>
+  <title>Quiz2</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+      <div class="col-xs-4 slogan">
+        Must see movies!
+      </div>
+    <div class="col-xs-5 links">
+      <%= link_to 'Contribute', new_movie_path %>
+      <%= link_to 'About', '#' %>
+    </div>
+  </header>
 
-
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>
+
