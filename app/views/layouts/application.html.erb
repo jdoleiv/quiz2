@@ -8,16 +8,54 @@
 </head>
 <body>
   <header>
-      <div class="col-xs-4 slogan">
-        Must see movies!
-      </div>
-    <div class="col-xs-5 links">
-      <%= link_to 'Contribute', new_movie_path %>
-      <%= link_to 'About', '#' %>
+    <div class="col-xs-3">
+      <%= link_to root_path do %>
+          <div class="col-xs-4 slogan">
+            Must see movies!
+          </div>
+      <% end %>
+     </div> 
+    <div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-5 links">
+      <!-- Button trigger modal -->
+      <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
     </div>
   </header>
 
-  <%= yield %>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Add your movie</h4>
+        </div>
+        <%= simple_form_for Movie.new do |f| %>
+          <div class="modal-body">
+            <%= f.input :title, label: "What is the movie you want to add?", placeholder: "Glengarry Glen Ross" %>
+            <br />
+            <%= f.input :director, label: "Who is the director of the movie?", placeholder: 'James Foley' %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Add Movie', class: 'btn btn-danger' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <br class="clear" />
+
+  <div class="container">
+    <% if flash[:error].present? %>
+      <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
+        <%= flash[:error].html_safe %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
+
 </body>
 </html>
 

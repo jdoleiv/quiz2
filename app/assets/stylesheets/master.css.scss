@@ -1,7 +1,88 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+.clear {
+  clear:both;
+}
+
+.slogan {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-style: italic;
+  padding-top: 26px;
+}
+
+.links {
+  padding-top: 26px;
+}
+
+.links a {
+  color:black;
+  font-size: 25px;
+  border-bottom: 1px solid #dfdfdf;
+  font-family:  'sinkin_sans400_regular', sans-serif;
+  font-weight: bold;
+}
+
+header {
+  border-top: 9px solid #222222;
+}
+
+hr {
+  clear:both;
+}
+
 h1 {
-  color:blue;
+  font-family: 'sinkin_sans400_regular', sans-serif;
+  font-weight: bold;
+  font-size:  38px;
+}
+
+h2 {
+  font-family: 'sinkin_sans400_regular', sans-serif;
+}
+
+.next-quote {
+  color: #f84342;
+  font-family: 'sinkin_sans400_regular', sans-serif;
+  font-size: 20px;
+}
+
+.footer-blurb {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-style: italic;
+  text-align:right;
+  font-size:10px;
 }
 
 .logo:hover {
   text-decoration:none;
+}
+
+.about {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+@media (max-width: 750px) {
+  .footer-blurb {
+    text-align: left;
+  }
+}
+
+.modal {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+h2 span {
+  color: #dddddd;
+  font-family: 'sinkin_sans400_regular', sans-serif;
+}
+
+::selection {
+  background-color: #f84342;
+}
+
+::-moz-selection {
+  background: #f84342; /* Gecko Browsers */
 }
